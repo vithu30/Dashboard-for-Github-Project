@@ -45,7 +45,9 @@ const options = {
 const urlNavigation = (cell) => {
     let link = `${cell}`;
     return (
-        <a href={link} target="_blank" >{link}</a>
+        <a href = {link} target = "_blank">
+            {link}
+        </a>
     )
 };
 
@@ -92,23 +94,23 @@ class issueData extends Component{
 
         return(
             <div>
-                <div className="summaryTable">
+                <div className = "summaryTable">
                         <TacoTable
-                            initialSortDirection={SortDirection.Ascending}
-                            initialSortColumnId="Total"
-                            columns={summaryColoumn}
-                            data={this.state.summary}
+                            initialSortDirection = {SortDirection.Ascending}
+                            initialSortColumnId = "Total"
+                            columns = {summaryColoumn}
+                            data = {this.state.summary}
                             striped
                         />
                 </div>
 
                 <BootstrapTable
-                    data={this.state.data}
-                    striped={true}
-                    bordered={ false }
-                    dataAlign="center"
-                    pagination search={ true }
-                    options={ options }
+                    data = {this.state.data}
+                    striped = {true}
+                    bordered = { false }
+                    dataAlign = "center"
+                    pagination search = { true }
+                    options = { options }
                 >
                     <TableHeaderColumn
                         width = '20%'
@@ -130,7 +132,7 @@ class issueData extends Component{
                         width = '30%'
                         dataField = "Url"
                         dataSort = { true }
-                        dataFormat={urlNavigation}
+                        dataFormat = {urlNavigation}
                     >
                         Url
                     </TableHeaderColumn>

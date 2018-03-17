@@ -31,9 +31,9 @@ class App extends React.Component {
         return (
             <div>
                 <Header/>
-                <Tabs defaultActiveKey={1} animation={false} id="noanim-tab-example">
-                    <Tab eventKey={1} title="pullRequests" label="Pull Requests"
-                         headerStyle={{fontWeight: 'bold'}} activeHeaderStyle={{color: 'orange'}}>
+                <Tabs defaultActiveKey = {1} animation = {false} id = "noanim-tab-example">
+                    <Tab eventKey = {1} title = "pullRequests" label = "Pull Requests"
+                         headerStyle = {{fontWeight: 'bold'}} activeHeaderStyle = {{color: 'orange'}}>
                             <Well>
                                 <div className = 'formatPanel'>
                                     Pull requests from external contributors
@@ -41,8 +41,8 @@ class App extends React.Component {
                             </Well>
                         <PullRequests/>
                     </Tab>
-                    <Tab eventKey={2} title="issues" label = "Issues"
-                        headerStyle={{fontWeight: 'bold'}} activeHeaderStyle={{color: 'orange'}}>
+                    <Tab eventKey = {2} title = "issues" label = "Issues"
+                        headerStyle = {{fontWeight: 'bold'}} activeHeaderStyle = {{color: 'orange'}}>
                         <Well>
                             <div className = 'formatPanel'>
                                 Issues from external contributors
@@ -59,9 +59,11 @@ class App extends React.Component {
 class Header extends React.Component {
     render() {
         return (
-            <div className="App">
-                <header className="App-header">
-                    <h1 color={"white"}><img src={logo} className="App-logo" alt="logo" />Contirbutions from external committers</h1>
+            <div className = "App">
+                <header className = "App-header">
+                    <h1 color = {"white"}> <img src = {logo} className = "App-logo" alt = "logo"/>
+                        Contirbutions from external committers
+                    </h1>
                 </header>
             </div>
         );

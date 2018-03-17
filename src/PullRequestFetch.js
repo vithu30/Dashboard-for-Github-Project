@@ -32,7 +32,9 @@ const options = {
 const urlNavigation = (cell) => {
     let link = `${cell}`;
     return (
-        <a href={link} target="_blank" >{link}</a>
+        <a href = {link} target = "_blank">
+            {link}
+        </a>
     )
 };
 const summaryColoumn = [
@@ -46,7 +48,6 @@ const summaryColoumn = [
         type: DataType.String,
         header: 'Number of PRs',
     },
-
 ];
 
 class pullRequestData extends Component{
@@ -84,7 +85,7 @@ class pullRequestData extends Component{
     render() {
         return(
             <div>
-                <div className="summaryTable">
+                <div className = "summaryTable">
                         <TacoTable
                             initialSortDirection = { SortDirection.Ascending }
                             initialSortColumnId = "Product"
@@ -121,7 +122,7 @@ class pullRequestData extends Component{
                         width = '35%'
                         dataField = "Url"
                         dataSort = { true }
-                        dataFormat={urlNavigation}
+                        dataFormat = {urlNavigation}
                     >
                         Url
                     </TableHeaderColumn>
