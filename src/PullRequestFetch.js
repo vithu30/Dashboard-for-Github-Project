@@ -21,14 +21,11 @@ import './react-taco-table.css';
 import './App.css';
 import './react-bootstrap-table.min.css';
 
-const url = 'http://localhost:9090/BallerinaService/pullRequests';
-const summaryUrl = 'http://localhost:9090/BallerinaService/summaryOfPullRequests';
 const options = {
     clearSearch: true,
     defaultSortName: 'Days',
     defaultSortOrder: 'asc'
 };
-
 const urlNavigation = (cell) => {
     let link = `${cell}`;
     return (
@@ -49,6 +46,8 @@ const summaryColoumn = [
         header: 'Number of PRs',
     },
 ];
+const url = 'http://localhost:9090/BallerinaService/pullRequests';
+const summaryUrl = 'http://localhost:9090/BallerinaService/summaryOfPullRequests';
 
 class pullRequestData extends Component{
     constructor(props){
@@ -60,19 +59,18 @@ class pullRequestData extends Component{
     }
     componentDidMount() {
         fetch(url)
-            .then((pullRequests)=> pullRequests.json())
-            .then((jsonPullRequests)=>
+            .then((pullRequests) => pullRequests.json())
+            .then((jsonPullRequests) =>
                 {
                     console.log(jsonPullRequests);
                     this.setState({
                         data : jsonPullRequests,
-
                     })
                 }
             );
         fetch(summaryUrl)
-            .then((prSummary)=> prSummary.json())
-            .then((jsonPrSummary)=>
+            .then((prSummary) => prSummary.json())
+            .then((jsonPrSummary) =>
                 {
                     console.log(jsonPrSummary);
                     this.setState({
@@ -81,7 +79,6 @@ class pullRequestData extends Component{
                 }
             )
     }
-
     render() {
         return(
             <div>
@@ -94,7 +91,6 @@ class pullRequestData extends Component{
                             striped
                         />
                 </div>
-
                 <BootstrapTable
                     data = { this.state.data }
                     striped = { true }
@@ -159,5 +155,4 @@ class pullRequestData extends Component{
         )
     }
 }
-
 export default pullRequestData;

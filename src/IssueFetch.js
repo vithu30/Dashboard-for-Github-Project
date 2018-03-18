@@ -22,7 +22,6 @@ import './react-taco-table.css';
 import './react-bootstrap-table.min.css';
 import './App.css';
 
-
 const summaryColoumn = [
     {
         id: 'productName',
@@ -34,14 +33,12 @@ const summaryColoumn = [
         type: DataType.Number,
         header: 'Number of PRs',
     },
-
 ];
 const options = {
     clearSearch: true,
     defaultSortName: 'Days',
     defaultSortOrder: 'asc'
 };
-
 const urlNavigation = (cell) => {
     let link = `${cell}`;
     return (
@@ -50,10 +47,8 @@ const urlNavigation = (cell) => {
         </a>
     )
 };
-
 const url = 'http://localhost:9090/BallerinaService/issues';
 const summaryUrl = 'http://localhost:9090/BallerinaService/summaryOfIssues';
-
 
 class issueData extends Component{
     constructor(props){
@@ -62,23 +57,21 @@ class issueData extends Component{
             data : [],
             summary : [],
         }
-
     }
     componentDidMount() {
         fetch(url)
-            .then((issues)=> issues.json())
-            .then((jsonIssues)=>
+            .then((issues) => issues.json())
+            .then((jsonIssues) =>
                 {
                     console.log(jsonIssues);
                     this.setState({
                         data : jsonIssues,
-
                     })
                 }
             );
         fetch(summaryUrl)
-            .then((summary)=> summary.json())
-            .then((jsonSummary)=>
+            .then((summary) => summary.json())
+            .then((jsonSummary) =>
                 {
                     console.log(jsonSummary);
                     this.setState({
@@ -87,11 +80,7 @@ class issueData extends Component{
                 }
             );
     }
-
-
-
     render() {
-
         return(
             <div>
                 <div className = "summaryTable">
@@ -103,7 +92,6 @@ class issueData extends Component{
                             striped
                         />
                 </div>
-
                 <BootstrapTable
                     data = {this.state.data}
                     striped = {true}
@@ -162,5 +150,4 @@ class issueData extends Component{
         )
     }
 }
-
 export default issueData;
