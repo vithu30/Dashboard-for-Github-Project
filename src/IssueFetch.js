@@ -37,7 +37,7 @@ const summaryColoumn = [
 const options = {
     clearSearch: true,
     defaultSortName: 'Days',
-    defaultSortOrder: 'asc'
+    defaultSortOrder: 'desc'
 };
 const urlNavigation = (cell) => {
     let link = `${cell}`;
