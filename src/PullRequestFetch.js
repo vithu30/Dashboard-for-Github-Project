@@ -77,7 +77,7 @@ class pullRequestData extends Component{
                         summary : jsonPrSummary,
                     })
                 }
-            )
+            );
     }
     render() {
         return(
