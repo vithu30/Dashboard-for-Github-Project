@@ -85,12 +85,11 @@ class issueData extends Component{
             <div>
                 <div className = "summaryTable">
                         <TacoTable
-                            initialSortDirection = {SortDirection.Ascending}
+                            initialSortDirection = { SortDirection.Ascending }
                             initialSortColumnId = "Total"
-                            columns = {summaryColoumn}
-                            data = {this.state.summary}
-                            striped
-                        />
+                            columns = { summaryColoumn }
+                            data = { this.state.summary }
+                            striped />
                 </div>
                 <BootstrapTable
                     data = {this.state.data}
@@ -98,52 +97,45 @@ class issueData extends Component{
                     bordered = { false }
                     dataAlign = "center"
                     pagination search = { true }
-                    options = { options }
-                >
+                    options = { options } >
                     <TableHeaderColumn
                         width = '20%'
                         dataField = "product"
                         isKey = { true }
-                        dataSort = { true }
-                    >
-                        Product
+                        dataSort = { true } >
+                            Product
                     </TableHeaderColumn>
                     <TableHeaderColumn
                         width = '15%'
                         dataField = "RepositoryName"
-                        dataSort = { true }
-                    >
-                        Repository
+                        dataSort = { true } >
+                            Repository
                     </TableHeaderColumn>
                     <TableHeaderColumn
                         ref = 'url'
                         width = '30%'
                         dataField = "Url"
                         dataSort = { true }
-                        dataFormat = {urlNavigation}
-                    >
-                        Url
+                        dataFormat = { urlNavigation } >
+                            Url
                     </TableHeaderColumn>
                     <TableHeaderColumn
                         width = '15%'
                         dataField = "githubId"
-                        dataSort = { true }
-                    >
-                        Github Id
+                        dataSort = { true } >
+                            Github Id
                     </TableHeaderColumn>
                     <TableHeaderColumn
                         width = '10%'
                         dataField = "Days"
-                        dataSort = { true }
-                    >
-                        Open days
+                        dataSort = { true } >
+                            Open days
                     </TableHeaderColumn>
                     <TableHeaderColumn
                         width = '10%'
                         dataField = "Weeks"
-                        dataSort = { true }
-                    >
-                        Open Weeks
+                        dataSort = { true } >
+                            Open Weeks
                     </TableHeaderColumn>
                 </BootstrapTable>
             </div>

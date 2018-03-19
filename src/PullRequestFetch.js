@@ -88,67 +88,58 @@ class pullRequestData extends Component{
                             initialSortColumnId = "Product"
                             columns = { summaryColoumn }
                             data = { this.state.summary }
-                            striped
-                        />
+                            striped />
                 </div>
                 <BootstrapTable
                     data = { this.state.data }
                     striped = { true }
                     bordered = { false }
                     pagination search = { true }
-                    options = { options }
-                >
+                    options = { options } >
                     <TableHeaderColumn
                         width = '20%'
                         dataField = "product"
                         isKey = { true }
-                        dataSort = { true }
-                    >
-                        Product
+                        dataSort = { true } >
+                            Product
                     </TableHeaderColumn>
                     <TableHeaderColumn
                         width = '15%'
                         dataField = "RepositoryName"
-                        dataSort = { true }
-                    >
-                        Repository
+                        dataSort = { true } >
+                            Repository
                     </TableHeaderColumn>
                     <TableHeaderColumn
                         ref = 'url'
                         width = '35%'
                         dataField = "Url"
                         dataSort = { true }
-                        dataFormat = {urlNavigation}
-                    >
-                        Url
+                        dataFormat = { urlNavigation } >
+                            Url
                     </TableHeaderColumn>
                     <TableHeaderColumn
                         width = '15%'
                         dataField = "State"
-                        dataSort = { true }
-                    >
-                        PR Status
+                        dataSort = { true } >
+                            PR Status
                     </TableHeaderColumn>
                     <TableHeaderColumn
                         width = '15%'
                         dataField = "githubId"
-                        dataSort = { true }
-                    >
-                        Github Id
+                        dataSort = { true } >
+                            Github Id
                     </TableHeaderColumn>
                     <TableHeaderColumn
                         width = '10%'
                         dataField = "Days"
-                        dataSort = { true }
-                    >
-                        Open days
+                        dataSort = { true } >
+                            Open days
                     </TableHeaderColumn>
                     <TableHeaderColumn
                         width = '10%'
                         dataField = "Weeks"
-                        dataSort = { true }
-                    >
-                        Open Weeks
+                        dataSort = { true } >
+                            Open Weeks
                     </TableHeaderColumn>
                 </BootstrapTable>
             </div>
